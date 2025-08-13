@@ -220,6 +220,8 @@ class FeedbackWidgetState extends State<FeedbackWidget>
                               minScale: .7,
                               child: ControlsColumn(
                                 mode: mode,
+                                backgroundColor: FeedbackTheme.of(context)
+                                    .feedbackMenuBackgroundColor,
                                 activeColor: painterController.drawColor,
                                 showModeButtons: widget.showModeButtons,
                                 colors: widget.drawColors,

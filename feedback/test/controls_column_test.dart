@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 void main() {
   Widget create({
     Color? activeColor,
+    Color? backgroundColor,
     FeedbackMode? mode,
     bool? showNavigateButton,
     ValueChanged<Color>? onColorChanged,
@@ -21,6 +22,7 @@ void main() {
         activeColor: activeColor ?? Colors.red,
         mode: mode ?? FeedbackMode.draw,
         showModeButtons: showNavigateButton ?? true,
+        backgroundColor: backgroundColor ?? Colors.grey,
         colors:
             colors ?? [Colors.red, Colors.green, Colors.blue, Colors.yellow],
         onClearDrawing: onClearDrawing ?? () {},
