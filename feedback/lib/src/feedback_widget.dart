@@ -96,12 +96,9 @@ class FeedbackWidgetState extends State<FeedbackWidget>
 
   @visibleForTesting
   bool backButtonIntercept() {
-    if (mode == FeedbackMode.draw && widget.isFeedbackVisible) {
-      if (painterController.getStepCount() > 0) {
-        painterController.undo();
-      } else {
-        BetterFeedback.of(context).hide();
-      }
+    if (widget.isFeedbackVisible) {
+      painterController.clear();
+      BetterFeedback.of(context).hide();
       return true;
     }
     return false;

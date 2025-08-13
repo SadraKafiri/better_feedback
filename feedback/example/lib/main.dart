@@ -53,13 +53,7 @@ class _MyAppState extends State<MyApp> {
         ],
       ),
       darkTheme: FeedbackThemeData.dark(),
-      localizationsDelegates: [
-        GlobalFeedbackLocalizationsDelegate(),
-        GlobalMaterialLocalizations.delegate,
-        GlobalCupertinoLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-      ],
-      localeOverride: const Locale('en'),
+
       mode: FeedbackMode.draw,
       pixelRatio: 1,
       child: MaterialApp(

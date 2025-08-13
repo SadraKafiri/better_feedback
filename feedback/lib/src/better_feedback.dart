@@ -229,26 +229,18 @@ class _BetterFeedbackState extends State<BetterFeedback> {
       darkTheme: widget.darkTheme,
       localizationsDelegates: widget.localizationsDelegates,
       localeOverride: widget.localeOverride,
-      child: Builder(builder: (context) {
-        return FeedbackData(
-          controller: controller,
-          child: Builder(
-            builder: (context) {
-              assert(debugCheckHasFeedbackLocalizations(context));
-              return FeedbackWidget(
-                isFeedbackVisible: controller.isVisible,
-                drawColors: FeedbackTheme.of(context).drawColors,
-                mode: widget.mode,
-                showModeButtons: widget.showModeButtons,
-                pixelRatio: widget.pixelRatio,
-                feedbackBuilder:
-                    widget.feedbackBuilder ?? simpleFeedbackBuilder,
-                child: widget.child,
-              );
-            },
-          ),
-        );
-      }),
+      child: FeedbackData(
+        controller: controller,
+        child: FeedbackWidget(
+          isFeedbackVisible: controller.isVisible,
+          drawColors: FeedbackTheme.of(context).drawColors,
+          mode: widget.mode,
+          showModeButtons: widget.showModeButtons,
+          pixelRatio: widget.pixelRatio,
+          feedbackBuilder: widget.feedbackBuilder ?? simpleFeedbackBuilder,
+          child: widget.child,
+        ),
+      ),
     );
   }
 
