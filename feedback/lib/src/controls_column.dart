@@ -13,6 +13,7 @@ class ControlsColumn extends StatelessWidget {
     super.key,
     required this.mode,
     required this.activeColor,
+    required this.backgroundColor,
     required this.onColorChanged,
     required this.onUndo,
     required this.onControlModeChanged,
@@ -32,12 +33,14 @@ class ControlsColumn extends StatelessWidget {
   final VoidCallback onClearDrawing;
   final List<Color> colors;
   final Color activeColor;
+  final Color backgroundColor;
   final FeedbackMode mode;
 
   @override
   Widget build(BuildContext context) {
     final isNavigatingActive = FeedbackMode.navigate == mode;
     return Card(
+      color: backgroundColor,
       margin: EdgeInsets.zero,
       shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.all(
