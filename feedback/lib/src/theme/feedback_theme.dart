@@ -35,6 +35,7 @@ class FeedbackThemeData {
   FeedbackThemeData(
       {this.background = Colors.grey,
       this.feedbackSheetColor = _lightGrey,
+      this.feedbackMenuBackgroundColor = _lightGrey,
       this.feedbackSheetHeight = .25,
       this.activeFeedbackModeColor = _blue,
       this.drawColors = _defaultDrawColors,
@@ -96,6 +97,10 @@ class FeedbackThemeData {
   /// The background color of the bottom sheet in which the user can input
   /// his feedback and thoughts.
   final Color feedbackSheetColor;
+
+  /// The background color of the column containing the action buttons
+  /// in the feedback menu.
+  final Color feedbackMenuBackgroundColor;
 
   /// The height of the bottom sheet as a fraction of the screen height.
   ///
