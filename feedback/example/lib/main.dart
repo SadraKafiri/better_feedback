@@ -48,8 +48,6 @@ class _MyAppState extends State<MyApp> {
         drawColors: [
           Colors.red,
           Colors.green,
-          Colors.blue,
-          Colors.yellow,
         ],
       ),
       darkTheme: FeedbackThemeData.dark(),
