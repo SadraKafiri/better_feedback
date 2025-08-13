@@ -24,7 +24,6 @@ class FeedbackWidget extends StatefulWidget {
     required this.child,
     required this.isFeedbackVisible,
     required this.drawColors,
-    required this.showModeButtons,
     required this.mode,
     required this.pixelRatio,
     required this.feedbackBuilder,
@@ -36,7 +35,6 @@ class FeedbackWidget extends StatefulWidget {
         );
 
   final bool isFeedbackVisible;
-  final bool showModeButtons;
   final FeedbackMode mode;
   final double pixelRatio;
   final Widget child;
@@ -221,7 +219,6 @@ class FeedbackWidgetState extends State<FeedbackWidget>
                               child: ControlsColumn(
                                 mode: mode,
                                 activeColor: painterController.drawColor,
-                                showModeButtons: widget.showModeButtons,
                                 colors: widget.drawColors,
                                 onColorChanged: (color) {
                                   setState(() {
