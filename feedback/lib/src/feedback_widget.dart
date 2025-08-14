@@ -277,9 +277,9 @@ class FeedbackWidgetState extends State<FeedbackWidget>
                                   widget.pixelRatio,
                                   extras: extras,
                                 );
-                                painterController.clear();
                               },
                               sheetProgress: sheetProgress,
+                              screenshotController: screenshotController,
                             ),
                           ),
                         ),
